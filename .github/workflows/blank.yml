@@ -20,12 +20,12 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v2.2.0
       with:
-        registry: registry.cn-chengdu.aliyuncs.com #注意这里
+        registry: crpi-nhn3le84ro8nr6k9.cn-hangzhou.personal.cr.aliyuncs.com #注意这里
         username: 路牌随手扫
         password: SMI@419a
         logout: false
         
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy docker://rpi-postgresql-postgis:16-3.4-alpine-arm docker://registry.cn-chengdu.aliyuncs.com/georgedocker1988/rpi-postgresql-postgis:16-3.4-alpine-arm
+         skopeo copy docker://rpi-postgresql-postgis:16-3.4-alpine-arm docker://crpi-nhn3le84ro8nr6k9.cn-hangzhou.personal.cr.aliyuncs.com/georgedocker1988/gisdocker:16-3.4-alpine-arm
       # 使用 skopeo 工具将镜像同步到阿里云个人仓库中，使用时请自行源和目标修改仓库名称和镜像名称
