@@ -27,5 +27,5 @@ jobs:
         
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy docker://rpi-postgresql-postgis:16-3.4-alpine-arm docker://crpi-nhn3le84ro8nr6k9.cn-hangzhou.personal.cr.aliyuncs.com/georgedocker1988/gisdocker:16-3.4-alpine-arm
+         skopeo copy docker://nginx:perl docker://crpi-nhn3le84ro8nr6k9.cn-hangzhou.personal.cr.aliyuncs.com/georgedocker1988/gisdocker:perl
       # 使用 skopeo 工具将镜像同步到阿里云个人仓库中，使用时请自行源和目标修改仓库名称和镜像名称
